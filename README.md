@@ -1,5 +1,4 @@
 # Week-2
-Here’s a concise `README.md` for your repository:
 
 ---
 
