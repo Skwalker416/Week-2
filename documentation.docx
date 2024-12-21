@@ -1,0 +1,69 @@
+
+
+# Telecom Data Processing
+
+This project focuses on processing telecom xDR (Call Detail Record) data, stored in a PostgreSQL database, for analysis. The project includes various scripts for loading data into the database, querying the data, and analyzing it.
+
+## Project Structure
+
+The repository is organized as follows:
+
+```
+.
+├── notebook/
+│   └── postgres_load.ipynb      # Jupyter notebook for loading and analyzing data
+├── scripts/
+│   ├── load_data.py             # Script to load the xDR data into PostgreSQL
+│   ├── sql_queries.py           # Script containing SQL queries to extract data
+├── tests/
+│   ├── __init__.py              # Test initialization file
+│   └── test_load_data.py        # Unit test for the load_data.py script
+├── telecom.sql                  # PostgreSQL dump file for data restoration
+├── requirements.txt             # List of required Python packages
+├── README.md                    # Project documentation
+└── LICENSE                      # License file
+```
+
+## Setup and Usage
+
+### 1. **Restore the Database**
+Ensure you have PostgreSQL installed and restore the database from the `telecom.sql` dump file:
+
+```bash
+psql -U <username> -d <dbname> -f telecom.sql
+```
+
+### 2. **Install Dependencies**
+Use the `requirements.txt` file to install the necessary Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. **Run the Scripts**
+You can run the scripts to load the data and query it as follows:
+
+- **Load Data**: The `load_data.py` script loads the telecom xDR data into PostgreSQL.
+- **Query Data**: The `sql_queries.py` script contains reusable SQL queries for extracting and processing the data.
+
+### 4. **Explore the Data**
+For a more interactive exploration, open the `postgres_load.ipynb` Jupyter notebook.
+
+### 5. **Run Tests**
+To ensure the integrity of the code, run the unit tests using `pytest`:
+
+```bash
+pytest tests/
+```
+
+## Requirements
+
+- Python 3.8+
+- PostgreSQL 12+
+- Python libraries listed in `requirements.txt`
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
