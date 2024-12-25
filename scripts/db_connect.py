@@ -30,3 +30,5 @@ def load_data():
     query = "SELECT * FROM xdr_data;"
     xdr_df = pd.read_sql(query, engine)  # Pass the engine, not the connection
     return xdr_df
+
+conn()
